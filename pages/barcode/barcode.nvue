@@ -1,0 +1,90 @@
+<template>
+	<view class="container">
+		<barcode id="barcode" class="tui-barcode" autostart="true" ref="barcode" background="#808080" frameColor="#31BCE7"
+		 scanbarColor="#31BCE7" :filters="fil" @marked="success" @error="fail" :style="{height:winHeight+'px'}"></barcode>
+
+		<view class="tui-turn__on" @click="toFlash">
+			<text class="tui-color__white">{{getText}}</text>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				fil: [0, 2, 1],
+				winHeight: 600,
+				isTurnOn: false,
+				lang: 'en',
+				flash_on_en: 'Turn on the flash',
+				flash_off_en: 'Turn off the flash',
+				flash_on_ar: 'فتح الفلاش',
+				flash_off_ar: 'إيقاف الفلاش'
+			};
+		},
+		onLoad() {
+			let sys = uni.getSystemInfoSync()
+			this.winHeight = sys.windowHeight;
+			this.lang = uni.getStorageSync('utag_lang') || 'en'
+		},
+		computed: {
+			getText() {
+				let status = this.isTurnOn ? 'off' : 'on';
+				let text = this[`flash_${status}_${this.lang}`];
+				return text;
+			}
+		},
+		onShow() {
+			setTimeout(() => {
+				this.$refs.barcode && this.toStart()
+			}, 100);
+		},
+		methods: {
+			success(e) {
+				//scan success
+				console.log('success:' + JSON.stringify(e));
+				this.tocancel()
+			},
+			fail(e) {
+				console.log('fail:' + JSON.stringify(e));
+			},
+			toStart: function() {
+				this.$refs.barcode.start();
+			},
+			tocancel: function() {
+				this.$refs.barcode.cancel();
+			},
+			toFlash: function() {
+				this.isTurnOn = !this.isTurnOn;
+				this.$refs.barcode.setFlash(this.isTurnOn);
+			}
+		}
+	};
+</script>
+
+<style>
+	.container {
+		background-color: #808080;
+		color: #FFFFFF;
+	}
+
+	.tui-barcode {
+		width: 750rpx;
+		height: 700rpx;
+		background-color: #808080;
+	}
+
+	.tui-turn__on {
+		width: 750rpx;
+		position: fixed;
+		left: 0;
+		bottom: 200rpx;
+	}
+
+	.tui-color__white {
+		text-align: center;
+		color: rgba(255, 255, 255, .7);
+		font-weight: 400;
+	}
+</style>

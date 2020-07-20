@@ -1,0 +1,159 @@
+{
+	"pages": [{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarTitleText": "UTAG",
+			"titleNView": false,
+			"navigationStyle": "custom"
+		}
+	}, {
+		"path": "pages/login/login",
+		"style": {
+			"titleNView": false,
+			"navigationStyle": "custom"
+		}
+	}, {
+		"path": "pages/reg/reg",
+		"style": {
+			"titleNView": false,
+			"navigationStyle": "custom"
+		}
+	}, {
+		"path": "pages/reset-pwd/reset-pwd",
+		"style": {
+			"titleNView": false,
+			"navigationStyle": "custom"
+		}
+	}, {
+		"path": "pages/reset-verify/reset-verify",
+		"style": {
+			"titleNView": false,
+			"navigationStyle": "custom"
+		}
+	}, {
+		"path": "pages/my/my",
+		"style": {
+			"titleNView": false,
+			"navigationStyle": "custom"
+		}
+	}, {
+		"path": "pages/activate/activate",
+		"style": {
+			"titleNView": false,
+			"navigationStyle": "custom",
+			"backgroundColorTop": "#FFFFFF",
+			"navigationBarTextStyle": "black"
+		}
+	}, {
+		"path": "pages/thanks/thanks",
+		"style": {
+			"titleNView": false,
+			"navigationStyle": "custom",
+			"mp-weixin": {
+				"disableScroll": true
+			},
+			"app-plus": {
+				"bounce": "none"
+			},
+			"mp-alipay": {
+				"allowsBounceVertical": "NO"
+			},
+			"mp-baidu": {
+				"disableScroll": true
+			}
+		}
+	}, {
+		"path": "pages/cart/cart",
+		"style": {
+			"titleNView": false,
+			"navigationStyle": "custom"
+		}
+	}, {
+		"path": "pages/confirm-order/confirm-order",
+		"style": {
+			"titleNView": false,
+			"navigationStyle": "custom",
+			"navigationBarTextStyle": "black",
+			"backgroundColorTop": "#FFFFFF"
+		}
+	}, {
+		"path": "pages/shipping/shipping",
+		"style": {
+			"titleNView": false,
+			"navigationStyle": "custom",
+			"navigationBarTextStyle": "black",
+			"backgroundColorTop": "#FFFFFF"
+		}
+	}, {
+		"path": "pages/payment/payment",
+		"style": {
+			"titleNView": false,
+			"navigationStyle": "custom",
+			"navigationBarTextStyle": "black",
+			"backgroundColorTop": "#FFFFFF"
+		}
+	}, {
+		"path": "pages/webview/webview",
+		"style": {
+			"navigationBarTitleText": "UTAG",
+			"navigationBarTextStyle": "black"
+		}
+	}, {
+		"path": "pages/sidebar/sidebar",
+		"style": {
+			"titleNView": false,
+			"navigationStyle": "custom",
+			"mp-weixin": {
+				"disableScroll": true
+			},
+			"app-plus": {
+				"bounce": "none"
+			},
+			"mp-alipay": {
+				"allowsBounceVertical": "NO"
+			},
+			"mp-baidu": {
+				"disableScroll": true
+			}
+		}
+	}, {
+		"path": "pages/barcode/barcode",
+		"style": {
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "UTAG",
+			"backgroundColor": "#808080",
+			"backgroundColorTop": "#808080",
+			"backgroundColorBottom": "#808080",
+			"mp-weixin": {
+				"disableScroll": true
+			},
+			"app-plus": {
+				"bounce": "none",
+				"titleNView": {
+					"type": "transparent"
+				}
+			},
+			"mp-alipay": {
+				"allowsBounceVertical": "NO"
+			},
+			"mp-baidu": {
+				"disableScroll": true
+			}
+		}
+	}],
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"tui-(.*)": "@/components/tui-$1/tui-$1.vue"
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "UTAG",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF",
+		"backgroundColorTop": "#0eade1",
+		"backgroundColorBottom": "#FFFFFF"
+
+	}
+}

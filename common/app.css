@@ -1,0 +1,120 @@
+/* #ifndef APP-NVUE */
+@font-face {
+	font-family: 'AvenirNext';
+	src: url('~@/static/fonts/avenirnext.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+page {
+	background-color: #FFFFFF;
+	font-size: 30rpx;
+	font-family: AvenirNext, -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+	color: #000000;
+	font-weight: 500;
+}
+
+.tui-status__bar {
+	width: 100%;
+	height: var(--status-bar-height);
+	background-color: #0eade1;
+}
+
+::-webkit-scrollbar {
+	width: 0 !important;
+	height: 0 !important;
+	color: transparent !important;
+	display: none;
+}
+
+.container {
+	display: flex;
+	box-sizing: border-box;
+	flex-direction: column;
+}
+
+.tui-header__box {
+	width: 100%;
+	position: relative;
+}
+.tui-header-inner{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	padding: 36rpx 36rpx 36rpx 30rpx;
+	box-sizing: border-box;
+}
+
+.tui-bg__img {
+	width: 100%;
+	height: 382rpx;
+}
+.tui-bg2__img{
+	width: 100%;
+	height: 313rpx;
+}
+
+.tui-logo__3x {
+	width: 135rpx;
+	height: 135rpx;
+	position: absolute;
+	left: 90rpx;
+	top: 80rpx;
+}
+
+.tui-logo2__3x {
+	width: 135rpx;
+	height: 135rpx;
+	position: absolute;
+	left: 90rpx;
+	top:120rpx;
+}
+.tui-header__logo{
+	width: 57rpx;
+	height: 57rpx;
+	flex-shrink: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.tui-icon__back {
+	width: 40rpx;
+	height: 40rpx;
+	position: absolute;
+	left: 39rpx;
+	top: 33rpx;
+}
+input{
+	font-size: 30rpx;
+}
+.tui-placeholder {
+	font-size: 30rpx;
+	font-weight: 500;
+	color: #000;
+}
+
+.tui-color-violet {
+	color: #443C6C;
+}
+.tui-flex{
+	display: flex;
+	align-items: center;
+}
+.tui-flex__center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.tui-flex__between{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+/* #endif */
