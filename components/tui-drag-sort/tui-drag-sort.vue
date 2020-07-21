@@ -193,7 +193,7 @@ export default {
 			if (list.length === 0) return;
 
 			// 异步加载数据时候, 延迟执行 initDom 方法, 防止无法正确获取 dom 信息
-			setTimeout(() => this.initDom(), 100);
+			setTimeout(() => this.initDom(), 200);
 		},
 		sort_end(e) {
 			this.$emit('sortend', {

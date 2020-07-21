@@ -1,10 +1,13 @@
 /* #ifndef APP-NVUE */
+/* #ifndef MP */
 @font-face {
 	font-family: 'AvenirNext';
 	src: url('~@/static/fonts/avenirnext.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
+
+/* #endif */
 
 page {
 	background-color: #FFFFFF;
@@ -37,7 +40,8 @@ page {
 	width: 100%;
 	position: relative;
 }
-.tui-header-inner{
+
+.tui-header-inner {
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -53,7 +57,8 @@ page {
 	width: 100%;
 	height: 382rpx;
 }
-.tui-bg2__img{
+
+.tui-bg2__img {
 	width: 100%;
 	height: 313rpx;
 }
@@ -71,17 +76,19 @@ page {
 	height: 135rpx;
 	position: absolute;
 	left: 90rpx;
-	top:120rpx;
+	top: 120rpx;
 }
-.tui-header__logo{
+
+.tui-header__logo {
 	width: 57rpx;
 	height: 57rpx;
 	flex-shrink: 0;
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 }
+
 .tui-icon__back {
 	width: 40rpx;
 	height: 40rpx;
@@ -89,9 +96,11 @@ page {
 	left: 39rpx;
 	top: 33rpx;
 }
-input{
+
+input {
 	font-size: 30rpx;
 }
+
 .tui-placeholder {
 	font-size: 30rpx;
 	font-weight: 500;
@@ -101,16 +110,19 @@ input{
 .tui-color-violet {
 	color: #443C6C;
 }
-.tui-flex{
+
+.tui-flex {
 	display: flex;
 	align-items: center;
 }
-.tui-flex__center{
+
+.tui-flex__center {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.tui-flex__between{
+
+.tui-flex__between {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

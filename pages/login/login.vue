@@ -4,7 +4,7 @@
 		<view class="tui-header__box">
 			<image src="/static/images/img_layer_bg.png" class="tui-bg__img"></image>
 			<image src="/static/images/img_logo_3x.png" class="tui-logo__3x"></image>
-			<view class="tui-lang__box">
+			<view class="tui-lang__box" :style="{marginTop:menuButtonTop+'px'}">
 				<view class="tui-lang__item" :class="{'tui-lang__active':lang===1}" @tap="switchLang(1)">
 					<view class="tui-scale">AR</view>
 				</view>
@@ -42,7 +42,8 @@
 		data() {
 			return {
 				//语言切换 1-AR 2-English
-				lang: 1
+				lang: 1,
+				menuButtonTop: 0
 			}
 		},
 		computed: {
@@ -55,6 +56,11 @@
 		},
 		onLoad() {
 			this.lang = this._i18n.locale === 'en' ? 2 : 1
+
+			// #ifdef MP
+			let menu = wx.getMenuButtonBoundingClientRect();
+			this.menuButtonTop = menu.height
+			// #endif
 		},
 		methods: {
 			switchLang(index) {
@@ -63,16 +69,16 @@
 				this._i18n.locale = langVal;
 				uni.setStorageSync('utag_lang', langVal)
 			},
-			forgot(){
+			forgot() {
 				this.tui.href('../reset-verify/reset-verify')
 			},
-			reg(){
+			reg() {
 				this.tui.href('../reg/reg')
 			},
-			login(){
-				uni.setStorageSync('thorui_token','token_13141516')
+			login() {
+				uni.setStorageSync('thorui_token', 'token_13141516')
 				uni.reLaunch({
-					url:'../index/index'
+					url: '../index/index'
 				})
 			}
 		}

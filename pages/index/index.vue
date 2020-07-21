@@ -6,6 +6,7 @@
 			<view class="tui-header-inner">
 				<image src="/static/images/icon_menu_3x.png" class="tui-menu__img" mode="widthFix" @tap="sidebar"></image>
 				<image src="/static/images/img_logo.png" class="tui-header__logo"></image>
+				<!-- #ifndef MP -->
 				<view class="tui-lang__box" :class="{ 'tui-hidden': tabIndex === 1 }">
 					<view class="tui-lang__item" :class="{ 'tui-lang__active': lang === 1 }" @tap="switchLang(1)">
 						<view class="tui-scale">AR</view>
@@ -14,6 +15,7 @@
 						<view class="tui-scale">English</view>
 					</view>
 				</view>
+				<!-- #endif -->
 			</view>
 			<view class="tui-header__bottom" @tap="login">
 				<view class="tui-avatar__box">
@@ -134,6 +136,7 @@
 			this.$eventHub.$on('tabChange', res => {
 				this.tabIndex = Number(res.tabIndex);
 			});
+			
 		},
 		methods: {
 			switchTab(index) {

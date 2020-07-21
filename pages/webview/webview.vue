@@ -1,6 +1,6 @@
 <template>
 	<view class="container">
-		<web-view src="https://thorui.cn/"></web-view>
+		<web-view src="https://thorui.cn"></web-view>
 		Content from the web
 	</view>
 </template>

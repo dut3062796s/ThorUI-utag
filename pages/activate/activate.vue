@@ -33,6 +33,9 @@
 				show:false
 			}
 		},
+		onLoad() {
+			
+		},
 		computed: {
 			i18n() {
 				return this.$t('activated')
@@ -72,7 +75,9 @@
 			padding: 56rpx 63rpx;
 			box-sizing: border-box;
 			display: flex;
+			/* #ifndef MP */
 			justify-content: flex-end;
+			/* #endif */
 			image{
 				width: 38rpx;
 				height: 38rpx;
