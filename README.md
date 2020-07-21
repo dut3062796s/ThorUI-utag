@@ -67,7 +67,7 @@ ThorUI组件库，uni-app版本，v3编译，支持nvue uni-app编译模式（�
 
 <!-- <video src="https://thorui.cn/img/V152/0720.MP4" controls="controls" width="300" height="500">您的浏览器不支持播放该视频！</video> -->
 <iframe src="https://thorui.cn/img/V152/0720.MP4" scrolling="no" width="300px" height="500px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
+[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://thorui.cn/img/V152/0720.MP4)
 
 ## V1.5.1（2020-06-06）
 
