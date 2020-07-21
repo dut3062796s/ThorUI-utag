@@ -1,3 +1,9 @@
+ 
+# 扫码预览
+ 
+  ![](https://thorui.cn/img/template.png)
+ 
+ 
  ``开源不易，需要鼓励。给 ThorUI项目点个 star吧`` [GitHub](https://github.com/dingyong0214/ThorUI-uniapp)
 
 # ThorUI
